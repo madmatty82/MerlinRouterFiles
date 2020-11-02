@@ -1,0 +1,20 @@
+GARgoyle
+
+ASUS RT-5300 
+ASUS Merlin
+
+
+Notifictation
+
+# Script to notify when firmware updates - every 4 8 hours 
+/usr/sbin/curl --retry 3 "https://raw.githubusercontent.com/ignaciohermosillacornejo/Asuswrt-Merlin-Scripts/master/update-notification" -o "/jffs/scripts/update-notification" && chmod 755 /jffs/scripts/update-notification && sh /jffs/scripts/update-notification
+
+
+# Notify when someone connects to your VPN
+/usr/sbin/curl --retry 3 "https://raw.githubusercontent.com/ignaciohermosillacornejo/Asuswrt-Merlin-Scripts/master/wan-event" -o "/jffs/scripts/wan-event" && chmod 755 /jffs/scripts/wan-event && sh /jffs/scripts/wan-event 0 connected
+
+# script to noifiy when WAN reconnects
+/usr/sbin/curl --retry 3 "https://raw.githubuserconte
+nt.com/ignaciohermosillacornejo/Asuswrt-Merlin-Scripts/master/wan-event" -o "/jf
+fs/scripts/wan-event" && chmod 755 /jffs/scripts/wan-event && sh /jffs/scripts/w
+an-event 0 connected
